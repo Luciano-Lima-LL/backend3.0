@@ -1,4 +1,4 @@
-// src/controllers/CategoryController.jsconstCategory = require('../models/Category');
+const Category = require ('../models/category');
 
 module.exports = {
   getCategories(req, res) {
