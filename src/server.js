@@ -1,7 +1,9 @@
 const express = require('express');
 const sequelize = require('./config/database');
+const productRoutes = require('./routes/productRoutes');
 const userRoutes = require('./routes/userRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
+
 
 
 const app = express();
@@ -9,6 +11,7 @@ app.use(express.json());
 
 app.use(userRoutes.router);
 app.use(categoryRoutes.router);
+app.use(productRoutes);
 
 sequelize.sync({alter:true})
   .then(() => console.log('Banco de dados sincronizado'))
