@@ -12,7 +12,7 @@ const Category = sequelize.define('Category', {
   },
   use_in_menu: {
     type: DataTypes.BOOLEAN,
-    defaultValue: false,
+    defaultValue: true,
   },
 });
 
