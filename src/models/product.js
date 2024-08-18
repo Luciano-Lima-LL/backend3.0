@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database'); 
+
 const Product = sequelize.define('Product', {
   enabled: {
     type: DataTypes.BOOLEAN,
@@ -12,7 +13,6 @@ const Product = sequelize.define('Product', {
   slug: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true,
   },
   stock: {
     type: DataTypes.INTEGER,
@@ -29,7 +29,6 @@ const Product = sequelize.define('Product', {
     type: DataTypes.FLOAT,
     defaultValue: 0,
   },
-
 }, {
   timestamps: true,
 });

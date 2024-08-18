@@ -14,10 +14,8 @@ const Category = sequelize.define('Category', {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
   },
-  
 }, {
   timestamps: true,
 });
-
 
 module.exports = Category;
