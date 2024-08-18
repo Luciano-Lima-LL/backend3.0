@@ -29,6 +29,9 @@ const Product = sequelize.define('Product', {
     type: DataTypes.FLOAT,
     defaultValue: 0,
   },
+
+}, {
+  timestamps: true,
 });
 
 module.exports = Product;
